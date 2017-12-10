@@ -90,6 +90,7 @@ function receivedMessage(event) {
     //send back the text message
     sendTextMessage(senderID, messageText);
     sendGenericMessage(senderID, messageText);
+    sendGenericMessage(senderID, messageText);
 
   } else if (messageAttachments) {
     sendTextMessage(senderID, "attachment message receive");
@@ -134,7 +135,7 @@ function sendGenericMessage(recipientId, messageText) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "Kaung Khant Thu 1",
+            title: "Kaung Khant Thu",
             subtitle: "1st Batch King",
             item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
             image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
@@ -177,76 +178,6 @@ function sendGenericMessage(recipientId, messageText) {
             }],
           }, {
             title: "Kaung Khant Thu 4",
-            subtitle: "1st Batch King",
-            item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-              title: "Facebook"
-            }, {
-              type: "postback",
-              title: "Vote",
-              payload: "1",
-            }],
-          }, {
-            title: "Kaung Khant Thu 5",
-            subtitle: "1st Batch King",
-            item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-              title: "Facebook"
-            }, {
-              type: "postback",
-              title: "Vote",
-              payload: "1",
-            }],
-          }, {
-            title: "Kaung Khant Thu 6",
-            subtitle: "1st Batch King",
-            item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-              title: "Facebook"
-            }, {
-              type: "postback",
-              title: "Vote",
-              payload: "1",
-            }],
-          }, {
-            title: "Kaung Khant Thu 7",
-            subtitle: "1st Batch King",
-            item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-              title: "Facebook"
-            }, {
-              type: "postback",
-              title: "Vote",
-              payload: "1",
-            }],
-          }, {
-            title: "Kaung Khant Thu 8",
-            subtitle: "1st Batch King",
-            item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-              title: "Facebook"
-            }, {
-              type: "postback",
-              title: "Vote",
-              payload: "1",
-            }],
-          }, {
-            title: "Kaung Khant Thu 9",
             subtitle: "1st Batch King",
             item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
             image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
