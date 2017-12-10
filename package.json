@@ -1,0 +1,19 @@
+{
+  "name": "voting_chat_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NyiNyiLin/voting_chat_bot.git"
+  },
+  "author": "Nyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NyiNyiLin/voting_chat_bot/issues"
+  },
+  "homepage": "https://github.com/NyiNyiLin/voting_chat_bot#readme"
+}
