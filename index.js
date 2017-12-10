@@ -108,8 +108,10 @@ function receivedPostback(event) {
   console.log("Received postback for user %d and page %d with payload '%s' " +
     "at %d", senderID, recipientID, payload, timeOfPostback);
 
-  if(payload == "Correct"){
-    sendTextMessage(senderID, "Yes");
+  if(payload == "1"){
+    sendTextMessage(senderID, "You voted for Kaung Khant Thu");
+  }else if(payload == "1"){
+    sendTextMessage(senderID, "You voted for Myat Min Htun");
   }else{
     sendTextMessage(senderID, "No");
   }
@@ -135,7 +137,7 @@ function sendGenericMessage(recipientId, messageText) {
             title: "Kaung Khant Thu",
             subtitle: "1st Batch King",
             item_url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
-            image_url: "https://www.facebook.com/profile/picture/view/?profile_id=100010494642894",
+            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/21768474_496643367362147_925709046333701615_n.jpg?oh=0b3a2dbe3b260b8be5d654ff63c9215b&oe=5AD284D2",
             buttons: [{
               type: "web_url",
               url: "https://www.facebook.com/kaungkhant.thu.94064?ref=br_rs",
@@ -146,18 +148,18 @@ function sendGenericMessage(recipientId, messageText) {
               payload: "1",
             }],
           }, {
-            title: "touch",
-            subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",
-            image_url: "http://messengerdemo.parseapp.com/img/touch.png",
+            title: "Myat Min Htun",
+            subtitle: "2nd Batch King",
+            item_url: "https://www.facebook.com/myatmin.htun.97",
+            image_url: "https://scontent.fbkk8-1.fna.fbcdn.net/v/t1.0-1/p160x160/16427559_678701558998991_5278417030596624174_n.jpg?oh=a9b0ce5eb2d38cd2dd1526c72d395422&oe=5AD6626F",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
-              title: "Open Web URL"
+              url: "https://www.facebook.com/myatmin.htun.97",
+              title: "Facebook"
             }, {
               type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
+              title: "Vote",
+              payload: "2",
             }]
           }]
         }
