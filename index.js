@@ -89,10 +89,83 @@ function receivedMessage(event) {
 
     //send back the text message
     sendTextMessage(senderID, messageText);
+    sendGenericMessage(senderID, messageText);
 
   } else if (messageAttachments) {
     sendTextMessage(senderID, "attachment message receive");
   }
+}
+
+function receivedPostback(event) {
+  var senderID = event.sender.id;
+  var recipientID = event.recipient.id;
+  var timeOfPostback = event.timestamp;
+
+  // The 'payload' param is a developer-defined field which is set in a postback
+  // button for Structured Messages.
+  var payload = event.postback.payload;
+
+  console.log("Received postback for user %d and page %d with payload '%s' " +
+    "at %d", senderID, recipientID, payload, timeOfPostback);
+
+  if(payload == "Correct"){
+    sendTextMessage(senderID, "Yes");
+  }else{
+    sendTextMessage(senderID, "No");
+  }
+
+  // When a postback is called, we'll send a message back to the sender to
+  // let them know it was successful
+  sendTextMessage(senderID, "Postback called");
+}
+
+function sendGenericMessage(recipientId, messageText) {
+  // To be expanded in later sections
+
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "rift",
+            subtitle: "Next-generation virtual reality",
+            item_url: "https://www.oculus.com/en-us/rift/",
+            image_url: "http://messengerdemo.parseapp.com/img/rift.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/rift/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for first bubble",
+            }],
+          }, {
+            title: "touch",
+            subtitle: "Your Hands, Now in VR",
+            item_url: "https://www.oculus.com/en-us/touch/",
+            image_url: "http://messengerdemo.parseapp.com/img/touch.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/touch/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
+            }]
+          }]
+        }
+      }
+    }
+  };
+
+  callSendAPI(messageData);
 }
 
 function sendTextMessage(recipientId, messageText) {
